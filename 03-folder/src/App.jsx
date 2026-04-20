@@ -1,30 +1,53 @@
-import { useState } from "react";
-import "./index.css";
-import Todo from './Todo'; 
+import React, {useState} from 'react'
 
-// function App() {
-//   const [isTextVisible, setTextVisible] = useState(false);
+// const App = () => {
+//     const [num, setNum] = useState(0)
+//     const increaseNum = () =>{
+//         setNum(num+1)
+        
+//     }
+//     const decreaseNum = () =>{
+//         setNum(num-1)
+//     }
+//   return (
+//     <div className='flex justify-center items-center'>
+//       <h1 className='text-5xl bg-amber-50'>{num}</h1>
+//       <div className='gap-20'>
+//         <button onClick={increaseNum} className='text-5xl bg-blue-600 text-white gap-20'>increase</button>
+//       <button onClick={decreaseNum} className='text-5xl bg-blue-600 text-white'>decrease</button>
+//       </div>
+//     </div>
+//   )
+// }
 
-//   const toggleVisibility = () => {
-//     setTextVisible(!isTextVisible);
+// export default App
+
+
+
+// const App = () => {
+//   const [num, setNum] = useState([10, 20, 30]);
+
+//   const btnClicked = () => {
+//     const newNum = [...num]; // copy old array
+//     newNum.push(99);         // update copy
+//     setNum(newNum);          // set new state
 //   };
 
 //   return (
-//     <div className="h-screen flex flex-col justify-center items-center">
+//     <div className="p-10">
+//       <h1 className="text-2xl">{num.join(", ")}</h1>
 //       <button
-//         onClick={toggleVisibility}
-//         className="px-5 py-2 bg-amber-200 rounded-xl"
+//         onClick={btnClicked}
+//         className="mt-4 px-4 py-2 bg-blue-600 text-white rounded"
 //       >
-//         Toggle Text
+//         Click
 //       </button>
-//       <div className="mt-20">
-//         {isTextVisible && (
-//           <h1 className="text-indigo-700 text-4xl">hello world</h1>
-//         )}
-//       </div>
-   
 //     </div>
 //   );
-// }
+// };
 
-export default App;
+// export default App;
+
+
+
+
