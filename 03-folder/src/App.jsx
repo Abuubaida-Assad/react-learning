@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+// import React, {useState} from 'react'
 
 // const App = () => {
 //     const [num, setNum] = useState(0)
@@ -47,6 +47,18 @@ import React, {useState} from 'react'
 // };
 
 // export default App;
+import AxiosCleanUp from "./class-8";
+
+function App() {
+  return (
+    <div>
+      <AxiosCleanUp />
+    </div>
+  );
+}
+
+export default App;
+
 
 
 
