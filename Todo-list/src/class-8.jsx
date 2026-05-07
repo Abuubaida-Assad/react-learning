@@ -22,6 +22,7 @@ const AxiosCleanUp = () => {
       const response = await axios.get(
         `https://api.escuelajs.co/api/v1/products/?price=${event.target.value}`
       );
+      
 
       setProducts(response.data);
     } catch (err) {
