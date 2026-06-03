@@ -30,6 +30,7 @@ const App = () => {
     <div>
       <button onClick={getData}>get data</button>
     
+    
       
     </div>
   )
