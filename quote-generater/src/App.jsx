@@ -38,44 +38,90 @@
 // export default AxiosClass;
 
 
+// import { useState } from "react";
+// import axios from "axios";
+
+// function AgeGenerator() {
+//   const [name, setName] = useState("");
+//   const [age, setAge] = useState("");
+
+//   const ageFunction = async () => {
+//     try {
+//       const response = await axios.get(`https://api.agify.io?name=${name}`);
+
+//       setAge(response.data.age);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+
+//   const clearName = () => {
+//     setName("");
+//     setAge("");
+//   };
+
+//   return (
+//     <main className="quote-page">
+//       <h1>Age Generator</h1>
+
+//       <input
+//         type="text"
+//         placeholder="Enter a name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
+
+//       <button onClick={ageFunction}>Predict Age</button>
+//       <button onClick={clearName}>Clear</button>
+//       <p>The estimated age is: {age}</p>
+//     </main>
+//   );
+// }
+
+// export default AgeGenerator;
+
+
 import { useState } from "react";
-import axios from "axios";
 
-function AgeGenerator() {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+function App() {
+  const [username, setUsername] = useState("");
+  const [user, setUser] = useState("");
 
-  const ageFunction = async () => {
-    try {
-      const response = await axios.get(`https://api.agify.io?name=${name}`);
-
-      setAge(response.data.age);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const clearName = () => {
-    setName("");
-    setAge("");
+  const getGithubUser = () => {
+    setUser(username);
   };
 
   return (
-    <main className="quote-page">
-      <h1>Age Generator</h1>
+    <div style={{ textAlign: "center", padding: "20px" }}>
+      <h1>GitHub Activity Graph</h1>
 
       <input
         type="text"
-        placeholder="Enter a name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        placeholder="Enter GitHub Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
       />
 
-      <button onClick={ageFunction}>Predict Age</button>
-      <button onClick={clearName}>Clear</button>
-      <p>The estimated age is: {age}</p>
-    </main>
+      <button onClick={getGithubUser}>
+        Show Graph
+      </button>
+
+      {user && (
+        <div style={{ marginTop: "20px" }}>
+          <h2>{user}</h2>
+
+          <img
+            src={`https://github-readme-activity-graph.vercel.app/graph?username=${user}`}
+            alt="GitHub Activity Graph"
+            style={{
+              width: "100%",
+              maxWidth: "900px",
+            }}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 
-export default AgeGenerator;
+export default App;
