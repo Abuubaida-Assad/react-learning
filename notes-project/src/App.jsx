@@ -38,7 +38,7 @@ const App = () => {
             <button className='bg-white font-medium w-full outline-none text-black px-5 py-2 rounded'>Add Note</button>
         </div>
       </form>
-      
+
         <div className='lg:w-1/2 lg:border1/2 p-10'>
         <h1 className='text-4xl font-bold'>Your notes</h1>
         <div className='flex flex-wrap gap-5 mt-5 h-full overflow-auto'>
@@ -54,6 +54,7 @@ const App = () => {
               }} className='w-full cursor-pointer active:scale-95 bg-red-500 py-1 text-xs rounded font-bold text-white'>Delete</button>
             </div>
           })}
+          
         
   
           
