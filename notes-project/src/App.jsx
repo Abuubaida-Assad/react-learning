@@ -33,6 +33,7 @@ const App = () => {
               value={details}
               onChange={(e)=>{
                 setDetails(e.target.value)
+                
               }}
 />
             <button className='bg-white font-medium w-full outline-none text-black px-5 py-2 rounded'>Add Note</button>
@@ -54,7 +55,7 @@ const App = () => {
               }} className='w-full cursor-pointer active:scale-95 bg-red-500 py-1 text-xs rounded font-bold text-white'>Delete</button>
             </div>
           })}
-          
+
         
   
           
