@@ -34,6 +34,7 @@ const App = () => {
               onChange={(e)=>{
                 setDetails(e.target.value)
                 
+                
               }}
 />
             <button className='bg-white font-medium w-full outline-none text-black px-5 py-2 rounded'>Add Note</button>
